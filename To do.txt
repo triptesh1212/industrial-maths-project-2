@@ -1,0 +1,4 @@
+Things to work on:
+    1. Find a way to scale normal between 0 and 1
+    2. Find a way to generate GIFs for the presentation
+    3. Find a way to generate the same graphs as the paper on page 10
