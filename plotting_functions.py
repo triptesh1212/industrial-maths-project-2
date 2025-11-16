@@ -7,6 +7,8 @@ def plot_opinions(agents_history, agents_initial, rounds, alpha=0.6):
 
     colors = plt.cm.rainbow(agents_initial)
 
+    for i in range(len(agents_initial)):
+        plt.plot(range(rounds+1), agents_history[:, i], color=colors[i], alpha=alpha)
 
     for i in range(len(agents_initial)):
         ax.plot(range(rounds+1), agents_history[:, i], color=colors[i], alpha=alpha)
