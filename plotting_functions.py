@@ -17,8 +17,8 @@ def plot_opinions(agents_history, agents_initial, advertisers_history=None, adve
         print('No advertisers')
 
    
-    plt.xlabel("Time step")
-    plt.ylabel("Opinion")
+    plt.xlabel("Time step", fontsize=12)
+    plt.ylabel("Opinion", fontsize=12)
     plt.title("Opinion of all agents over time")
 
     #colour bar
@@ -82,7 +82,7 @@ def plot_opinions_grid(
     # cbar = plt.colorbar(sm, ax=ax)
     # cbar.set_label("Initial opinion value")
 
-def plot_methods(agents_history, alpha=1, tolerance=0.05, target=1, ax=None, colour=None, method=None, linewidth=1.5):
+def plot_methods(agents_history, alpha=1, tolerance=0.1, target=1, ax=None, colour=None, method=None, linewidth=1.8):
     
     time = agents_history.shape[0]
     mask = np.abs(agents_history - target) < tolerance #checks for opinions near 1, 1 for true, 0 false
@@ -95,6 +95,5 @@ def plot_methods(agents_history, alpha=1, tolerance=0.05, target=1, ax=None, col
     ax.plot(range(time), counts, alpha=alpha, color = colour, label=method, linewidth=linewidth)
     print(f'colour {colour} was used')
 
-    ax.set_xlabel("Time")
-    ax.set_ylabel(rf"Number of opinions within tolerance $\varepsilon$ {target}")
+    
 
